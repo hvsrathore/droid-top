@@ -1,0 +1,14 @@
+#!/data/data/com.termux/files/usr/bin/python3
+import sys
+import os
+
+# Resolve symlinks to find actual source root
+real_path = os.path.realpath(__file__)
+repo_dir = os.path.dirname(os.path.dirname(real_path))
+if repo_dir not in sys.path:
+    sys.path.insert(0, repo_dir)
+
+from droidtop.__main__ import main
+
+if __name__ == "__main__":
+    main()

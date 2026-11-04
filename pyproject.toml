@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "droidtop"
+version = "1.0.0"
+authors = [
+  { name = "Antigravity Pair Programmer" },
+]
+description = "A btop-like modern TUI resource monitor for Android & Termux"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+    "Topic :: System :: Monitoring",
+]
+dependencies = []
+
+[project.scripts]
+droidtop = "droidtop.__main__:main"
